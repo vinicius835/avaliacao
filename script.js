@@ -8,3 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 300);
     });
   });
+document.addEventListener("submit",function(event){
+  event.defaultPrevented();
+  
+})

@@ -7,10 +7,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid ">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid "> 
       <a class="navbar-brand" href="#">Vinícius Ângelo Alves</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -22,30 +23,35 @@
             <a class="nav-link" href="#sobre">Sobre Mim</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="experiencia" href="#experiencia">Experiência</a>
+            <a class="nav-link"  href="#experiencia">Experiência</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#formacao">Formação</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#habilidades">Habilidades</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projetos">Projetos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contato">Contato</a>
+            <a class="nav-link" href="#contatos">Contato</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projetos">Contato</a>
-          </li>
+
         </ul>
       </div>
     </div>
   </nav>
-  <header class="masthead">
+
+  <header class="masthead mt-5">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">esenvolvedor de Sistemas</h1>
+                <h1 class="mx-auto my-0 text-uppercase">Desenvolvedor de Sistemas</h1>
                 <h2 class="mx-auto my-0 text-uppercase pl-2">Vinícius Ângelo ALves</h2>
                 <img src="./assets/image/imagem_eu.jpg" class="img-fluid rounded-circle my-face mt-4 mb-4" alt="">
           
-                <h2 class=" mx-auto mt-2 mb-1 ">Desbravando meu futuro</h2>
+                <h4 class=" mx-auto  mb-1 subtext">viniangelsalves@gmail.com.br</h4>
                 
             </div>
         </div>
@@ -56,14 +62,14 @@
 
   <!-- Seções -->
   <section id="sobre" class="container max-auto text-center mt-5">
-    <h2>Sobre Mim</h2>
+    <h2 class="text-uppercase">Sobre Mim</h2>
     
     <p>Faço curso de Análise e Desenvolvimentos de Sistemas, eu aprendo neste curso: html, css, Javascript, Sql, bootstrap. 
       Meu objetivo é fazer meu trabalho de forma agradavel e profissional.</p>
   </section>
 
   <section id="experiencia" class="container mt-5 mb-5">
-    <h2>Experiência Profissional</h2>
+    <h2 class="text-uppercase">Experiência Profissional</h2>
     <div class="card text-center  col-lg-3 rounded-left mt-4 mb-2">
       <div class="card-body">
         <h5 class="card-title">Nenhuma empresa</h5>
@@ -72,69 +78,80 @@
     </div>
   </section>
   <section id="formacao"class="container ">
-  <h2>Formação Acâdemicas</h2>
+  <h2 class="text-uppercase">Formação Acâdemicas</h2>
   <div class="row mt-3">
     <div class="col-lg-3 mb-4 ml-2 mr-2">
+      <div class="card card-mod">
       <div class="card-body">
         <h4 class="card-title">Inglês Avançado</h4>
         <p class="card-title"><cite>-Jumper!Cursos e Idiomas</cite></p>
         <p class="card-text">Text</p>
       </div>
     </div>
+  </div>
     <div class=" col-lg-3 mb-4  ml-2 mr-2">
+      <div class="card card-mod">
       <div class="card-body">
         <h4 class="card-title">Informática Básica</h4>
         <p class="card-text">Text</p>
       </div>
     </div>
+  </div>
     <div class="col-md-4 mb-4  ml-2 mr-2">
+      <div class="card card-mod">
       <div class="card-body">
         <h4 class="card-title">Web Designer</h4>
         <p class="card-text">Text</p>
       </div>
     </div>
+  </div>
     <div class="col-md-4 mb-4  ml-2 mr-2">
+      <div class="card card-mod">
       <div class="card-body">
         <h4 class="card-title">Pacote Oficce (Word, Excel, Power Point)</h4>
         <p class="card-text">Text</p>
       </div>
     </div>
+  </div>
     <div class="col-md-4 mb-4  ml-2 mr-2">
+      <div class="card card-mod">
       <div class="card-body">
         <h4 class="card-title">Ensino Médio Completo</h4>
         <p class="card-text">Text</p>
       </div>
     </div>
   </div>
+  </div>
   </section>
 
   
 <section id="habilidades" class="container ">
-  <h2>habilidades</h2>
-  <ul class="text-uppercase">
-    <li>html</li>
-    <li>css</li>
-    <li>javascript</li>
-    <li>python</li>
-    <li>sql</li>
-    
+  <h2 class="text-uppercase">Habilidades</h2>
+  <ul class="text-uppercase text-white">
+    <li class="move-right mt-1 mb-1">html</li>
+    <li class="move-right mt-1 mb-1">css</li>
+    <li class="move-right mt-1 mb-1">javascript</li>
+    <li class="move-right mt-1 mb-1">python</li>
+    <li class="move-right mt-1 mb-1">sql</li>
+    <li class="move-right mt-1 mb-1">fetch</li>
+
   </ul>
 </section>
 
 
   <section id="projetos" class="projects-section container" id="projects">
     <h2  class="mb-4">Projetos</h2>  
-    <div class="container px-4 px-lg-5">
+    <div class="container px-4 px-lg-5 grass">
         <!-- Project One Row-->
          <a href="./projeto/projeto_1/projeto_1/index.html">
         <div class="row gx-0 justify-content-center size-img">
           <div class="col-lg-6"><img class="img-fluid" src="./assets/image/projeto 1.png" alt="..."></div>
           <div class="col-lg-6 order-lg-first">
-              <div class="bg-black text-center h-100 project">
+              <div class="bg-yellow text-center h-100 project">
                   <div class="d-flex h-100">
                       <div class="project-text w-100 my-auto text-center text-lg-right">
-                          <h4 class="text-white">pizzaria</h4>
-                          <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
+                          <h4 class="text-white">Busca de Usuários</h4>
+                          <p class="mb-0 text-white-50">Este projeto foi feito usando fetch e bootstrap. Voce busca o usuário desejado usando o id da pessoa</p>
                       </div>
                   </div>
               </div>
@@ -145,11 +162,11 @@
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center  size-img">
             <div class="col-lg-6"><img class="img-fluid " src="./assets/image/projeto 2.png" alt="..."></div>
             <div class="col-lg-6">
-                <div class="bg-black text-center h-100 project">
+                <div class="bg-yellow text-center h-100 project">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Misty</h4>
-                            <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                            <h4 class="text-white">Invasores no Nordeste</h4>
+                            <p class="mb-0 text-white-50">Este projeto é uma paródia do jogo chamado "space Attack". Criando uma historia de que alíens invadiram o nordeste e lampião ia impedilos.</p>
                         </div>
                     </div>
                 </div>
@@ -161,11 +178,11 @@
         <div class="row gx-0 justify-content-center  size-img">
             <div class="col-lg-6"><img class="img-fluid" src="./assets/image/projeto 3.png" alt="..."></div>
             <div class="col-lg-6 order-lg-first">
-                <div class="bg-black text-center h-100 project">
+                <div class="bg-yellow text-center h-100 project">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Mountains</h4>
-                            <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
+                            <h4 class="text-white">OrtaBlog</h4>
+                            <p class="mb-0 text-white-50">Este projeto é um site de blog que conta notícias.</p>
                         </div>
                     </div>
                 </div>
@@ -175,9 +192,11 @@
     </div>
 </section>
   <!-- Adicione outras seções aqui -->
-
+<section id="contatos" class="container">
+<h2 class="text-uppercase">Contatos</h2>
+</section>
   <!-- Rodapé -->
-  <footer class="bg-light text-center p-3 mt-5">
+  <footer class="bg-dark text-white text-center p-3 mt-5">
     <p>&copy; 2025 Vinícius Ângelo Alves</p>
   </footer>
 
