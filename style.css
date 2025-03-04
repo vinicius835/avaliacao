@@ -1,22 +1,28 @@
 /* Adicione no styles.css */
 a{text-decoration: none;
   color:grey;}
-body{background-color:rgb(255, 203, 105)}
-.my-face{width:300px;height:300px;}
+body{background-color:rgb(241, 224, 190)}
+.my-face{width:300px;height:300px;transition: transform 1s;}
+.my-face:hover{border:solid 1px; border-color: rgb(59, 4, 4);transform: scale(1.1);transition-duration: 2s;}
 .subtext{color:grey;}
 .size-img{transition: transform 1s;}
 .size-img:hover{
-  transform: scale(1.02);
+  transform: scale(1.03);
   transition-duration: 1s;
   border-radius: 5px;
 }
-
-.bg-yellow{background-color: rgb(255, 101, 45);}
+.bg-navbar{transition: background-color 0.2s ease;}
+.bg-navbar.scrolled{background-color: rgb(252, 169, 139);}
+.form-contact{ color: rgb(59, 4, 4);}
+.bg-yellow{background-color: rgb(252, 135, 92);}
 .move-right{transition:transform 2s;}
 .move-right:hover{
   transform: translate(5%);color:  rgb(255, 101, 45);
 }
 .card-mod{border: solid  rgb(78, 54, 54);border-radius: 10px; background-color: rgb(243, 241, 241);}
+.button-bg:hover{border: solid  rgb(109, 76, 76);border-radius: 10px; background-color: rgb(252, 135, 92);}
+
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
