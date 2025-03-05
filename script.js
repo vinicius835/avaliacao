@@ -24,10 +24,6 @@ document.addEventListener("submit", function(event) {
   var tel = document.getElementById("tel").value;
 
   // Validação dos campos
-  if (motivo_contactar.value == "-1") {
-    document.getElementById("Ocorreu_um_erro").classList.remove("d-none");
-    return;
-  }
 
   if (email === "") {
     document.getElementById("Ocorreu_um_erro").innerHTML = "Favor digitar o E-mail";
@@ -47,6 +43,11 @@ document.addEventListener("submit", function(event) {
     document.getElementById("Ocorreu_um_erro").classList.remove("d-none");
     return;
   }
+  if (motivo_contactar.value == "-1") {
+    document.getElementById("Ocorreu_um_erro").classList.remove("d-none");
+    return;
+  }
+
 
   // Se tudo estiver ok, esconder o erro e mostrar o sucesso
   document.getElementById("Ocorreu_um_erro").classList.add("d-none");
