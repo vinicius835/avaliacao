@@ -4,7 +4,7 @@ a{text-decoration: none;
   color:grey;}
 body{background-color:rgb(209, 245, 240)}
 .my-face{width:300px;height:300px;transition: transform 1s;}
-.my-face:hover{border:solid 1px; border-color: rgb(59, 4, 4);transform: scale(1.1);transition-duration: 2s;}
+.my-face:hover{border:solid 1px; border-color: rgb(59, 4, 4);transform: scale(1.01);transition-duration: 1s;}
 .subtext{color:grey;}
 .size-img{transition: transform 1s;}
 .size-img:hover{
@@ -12,6 +12,7 @@ body{background-color:rgb(209, 245, 240)}
   transition-duration: 1s;
   border-radius: 5px;
 }
+.bg-dark-perl{background:rgb(157, 219, 211);}
 .bg-navbar{transition: background-color 0.2s ease;}
 .bg-navbar.scrolled{background-color: rgb(143, 223, 212);}
 .form-contact{ color: rgb(0, 0, 0);}
@@ -38,4 +39,43 @@ body{background-color:rgb(209, 245, 240)}
   section {
     animation: fadeIn 1s ease-in-out;
   }
+ 
+ section {
+ padding: 50px 0;
+  width: 100%;
+}
+
+/* Seção Formação */
+#claro {
+  background-color: #f1f8e9; /* Cor de fundo da seção "Formação" */
+  min-height: 100vh;
+}
+
+/* Seção Habilidades */
+#escuro {
+  background-color: #f3e5f5; /* Cor de fundo da seção "Habilidades" */
+  min-height: 100vh;
+}
+
+/* Conectar as seções */
+section + section {
+  margin-top: -1px;
+
+}
+
+/* Modificações de estilo para cards */
+.card-mod {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+  .col-lg-6, .col-md-4 {
+    margin-bottom: 15px;
+  }
+}
   

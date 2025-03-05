@@ -1,5 +1,8 @@
 // Adicione no script.js
 document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById("contact-form");
+    const tudo_pronto = document.getElementById("tudo_pronto");
+    const ocorreu_erro = document.getElementById("Ocorreu_um_erro");
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
       section.style.opacity = '0';
@@ -7,52 +10,39 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.opacity = '1';
       }, 300);
     });
-  });
+  
+
+document.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const formData = new FormData(form);
+  fetch("https://jsonplaceholder.typicode.com/posts",{
+    method:"POST",
+    body:formData
+  })
+  .then(response => {
+    if(!response.ok){
+      throw new Error("Erro ao enviar a mensagem")
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log("Resposta do Servidor:",data);
+    tudo_pronto.classList.remove("d-none");
+    ocorreu_erro.classList.add("d-none");
+    form.reset();
+  })
+  .catch(error => {
+    console.error("Erro:",error);
+    tudo_pronto.classList.add("d-none");
+    ocorreu_erro.classList.remove("d-none");
+  })
+  
+  // Resetar o formulário
+  document.getElementById("contact-form").reset();
+});
+});
 document.addEventListener("scroll",function(){
   
   var navbar = document.querySelector(".bg-navbar")
   if (window.scrollY >50){navbar.classList.add('scrolled')}else{navbar.classList.remove("scrolled")}
-});
-
-
-document.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  // Obtendo os valores dos campos
-  var motivo_contactar = document.getElementById("motivo_contactar");
-  var email = document.getElementById("email").value;
-  var tel = document.getElementById("tel").value;
-
-  // Validação dos campos
-
-  if (email === "") {
-    document.getElementById("Ocorreu_um_erro").innerHTML = "Favor digitar o E-mail";
-    document.getElementById("Ocorreu_um_erro").classList.remove("d-none");
-    return;
-  }
-
-  // Verificação simples do e-mail
-  if (!email.includes("@")) {
-    document.getElementById("Ocorreu_um_erro").innerHTML = "Favor digitar um E-mail válido com '@'";
-    document.getElementById("Ocorreu_um_erro").classList.remove("d-none");
-    return;
-  }
-
-  if (tel === "") {
-    document.getElementById("Ocorreu_um_erro").innerHTML = "Favor digitar o Telefone";
-    document.getElementById("Ocorreu_um_erro").classList.remove("d-none");
-    return;
-  }
-  if (motivo_contactar.value == "-1") {
-    document.getElementById("Ocorreu_um_erro").classList.remove("d-none");
-    return;
-  }
-
-
-  // Se tudo estiver ok, esconder o erro e mostrar o sucesso
-  document.getElementById("Ocorreu_um_erro").classList.add("d-none");
-  document.getElementById("tudo_pronto").classList.remove("d-none");
-
-  // Resetar o formulário
-  document.getElementById("contact-form").reset();
 });
