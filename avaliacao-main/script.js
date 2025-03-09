@@ -1,24 +1,20 @@
 // Adicione no script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById("contact-form");
-    const tudo_pronto = document.getElementById("tudo_pronto");
-    const ocorreu_erro = document.getElementById("Ocorreu_um_erro");
     const sections = document.querySelectorAll('section');
-    const email = document.getElementById("email");
-    const tel = document.getElementById("tel");
-    const motivo = document.getElementById("motivo_contactar");
-    const area = document.getElementById("area").innerHTML;
-
-
-console.log(motivo)
     sections.forEach(section => {
       section.style.opacity = '0';
       setTimeout(() => {
         section.style.opacity = '1';
       }, 300);
     });
-  
-
+  });
+  const form = document.getElementById("contact-form");
+  const tudo_pronto = document.getElementById("tudo_pronto");
+  const ocorreu_erro = document.getElementById("Ocorreu_um_erro");
+  const email = document.getElementById("email");
+  const tel = document.getElementById("tel");
+  const motivo = document.getElementById("motivo_contactar");
+  const area = document.getElementById("area").innerHTML;
 document.addEventListener("submit", function(event) {
   event.preventDefault();
   if(email.value===""||tel.value ===""){
@@ -66,18 +62,7 @@ if ((area.value != "" && motivo.value == "-1") || (motivo.value == "1" && area.v
   // Resetar o formulário
   document.getElementById("contact-form").reset();
 });
-});
-// document.addEventListener("submit",function(event){
-
-//  var menu = document.getElementById("navbarNav");
-
-//   if(window.innerWidth< 992){ 
-//     setTimeout(function(){menu.classList.remove("show");},100)
-    
-//   }
-// });
 document.addEventListener("scroll",function(){
-
   var navbar = document.querySelector(".bg-navbar");
   if (window.scrollY >50){navbar.classList.add('scrolled')}else{navbar.classList.remove("scrolled");}
   
@@ -90,9 +75,11 @@ document.addEventListener("scroll",function(){
 });
 function abrirImagem(imageSrc){
   var modal = document.getElementById("imageModal");
-  modal.style.display = "block";
+  modal.style.display = "block";;
+  modal.style.opacity = "1";
   var modalImage = document.getElementById("modalImage");
-  
+  modalImage.style.width= "auto";
+  modalImage.style.height = "500px";
   modalImage.src = imageSrc;
 
 }
