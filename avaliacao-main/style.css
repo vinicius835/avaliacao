@@ -4,13 +4,14 @@ a{text-decoration: none;
   color:grey;}
 body{background-color:rgb(209, 245, 240)}
 .my-face{width:300px;height:300px;transition: transform 1s;}
-.my-face:hover{border:solid 1px; border-color: rgb(59, 4, 4);transform: scale(1.01);transition-duration: 1s;}
+.my-face:hover{border:solid 1px; border-color: rgb(37, 168, 151);transform: scale(1.01);transition-duration: 1s;}
 .subtext{color:grey;}
 .size-img{transition: transform 1s;}
 .size-img:hover{
-  transform: scale(1.03);
+  transform: scale(1.02);
   transition-duration: 1s;
   border-radius: 5px;
+  
 }
 .bg-dark-perl{background:rgb(157, 219, 211);}
 .bg-navbar{transition: background-color 0.2s ease;background-color: rgb(209, 245, 240);}
@@ -20,13 +21,16 @@ body{background-color:rgb(209, 245, 240)}
 #navbarNav.show{display: block;} */
 .form-contact{ color: rgb(0, 0, 0);}
 .bg-yellow{background-color: rgb(28, 189, 167);}
-.move-right{transition:transform 2s;}
+.move-right{transition:transform 0.5s;}
 .move-right:hover{ transform: translate(5%);color:  rgb(0, 77, 64);}
 .alert-success-contact{border: solid  rgb(37, 168, 151);background-color: rgb(127, 221, 198) ;}
 .alert-danger-contact{border: solid  rgb(221, 139, 101);background-color: rgb(243, 216, 166) ;}
-.card-mod{border: solid  rgb(37, 168, 151);border-radius: 10px; background-color: rgb(219, 245, 241);}
+.card-mod{border: solid  rgb(37, 168, 151);border-radius: 15px; background-color: rgb(219, 245, 241);}
+.card-effect{transition:transform 2s  step-end;}
+.card-effect:hover{border-radius:25px;border: solid rgb(214, 214, 214); background-color: rgb(211, 236, 233);  animation: card-effect 1s ;}
+.button-bg{border:solid  rgb(63, 199, 181);color:rgb(0, 95, 82);border-radius: 10px;background-color:rgb(111, 235, 218) ;}
+.button-bg:hover{border: solid  rgb(56, 223, 200);color:rgb(0, 95, 82);border-radius: 10px; background-color: rgb(180, 243, 235);}
 
-.button-bg:hover{border: solid  rgb(37, 168, 151);color:rgb(0, 95, 82);border-radius: 10px; background-color: rgb(180, 243, 235);}
 .text-change{color: black;font-family: Arial, Helvetica, sans-serif;}
 .text-change:hover{color: rgb(63, 63, 63);transition-duration: 1s;}
 
@@ -34,11 +38,11 @@ body{background-color:rgb(209, 245, 240)}
     from { opacity: 0; }
     to { opacity: 1; }
   }
-@keyframes size-img{
-  0%,100%{transform: translateY(0);}50%{transform: translateY(-10px);}
+
+@keyframes card-effect{
+  0%,100%{transform:translateY(0) scale(1); }50%{transform: translateY(-5px) scale(1.01);}
 }
 
-  
   section {
     animation: fadeIn 1s ease-in-out;
   }
@@ -120,3 +124,4 @@ section + section {
   text-decoration: none;
   cursor: pointer;
 }
+
