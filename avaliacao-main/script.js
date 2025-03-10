@@ -62,6 +62,18 @@ if ((area.value != "" && motivo.value == "-1") || (motivo.value == "1" && area.v
   // Resetar o formulário
   document.getElementById("contact-form").reset();
 });
+
+// document.addEventListener("submit",function(event){
+
+//  var menu = document.getElementById("navbarNav");
+
+//   if(window.innerWidth< 992){ 
+//     setTimeout(function(){menu.classList.remove("show");},100)
+    
+//   }
+// });
+
+
 document.addEventListener("scroll",function(){
   var navbar = document.querySelector(".bg-navbar");
   if (window.scrollY >50){navbar.classList.add('scrolled')}else{navbar.classList.remove("scrolled");}
@@ -76,10 +88,8 @@ document.addEventListener("scroll",function(){
 function abrirImagem(imageSrc){
   var modal = document.getElementById("imageModal");
   modal.style.display = "block";;
-  modal.style.opacity = "1";
+
   var modalImage = document.getElementById("modalImage");
-  modalImage.style.width= "auto";
-  modalImage.style.height = "500px";
   modalImage.src = imageSrc;
 
 }
